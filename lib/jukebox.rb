@@ -39,13 +39,17 @@ end
 
 
 def list(songs)
-  songs.each do |x|
-    puts x
+  songs.each_with_index do |i, x|
+    puts "#{i}. #{x}"
   end
 end
 
 def help
-  commands_array = ["help", "play", "list", "exit"]
+  commands_array =  ["I accept the following commans:", 
+                     "- help : displays this help message",
+                     "- list : displays a list of songs you can play",
+                     "- play : lets you choose a song to play",
+                     "- exit : exits this program"]
     commands_array.each do |x|
       puts x 
     end
