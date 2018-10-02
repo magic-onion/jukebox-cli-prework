@@ -39,8 +39,8 @@ end
 
 
 def list(songs)
-  songs.each do |x|
-    puts x
+  songs.each_with_index do |i, x|
+    puts "#{i}. #{x}"
   end
 end
 
